@@ -20,7 +20,7 @@ const sections = gsap.utils.toArray(".panel"),
   container = document.querySelector(".container");
 
 const updateScrollTrigger = () => {
-  if (document.activeElement.getElementsByClassName == "qr-text") {
+  if (window.innerWidth < 768 || document.activeElement.getElementsByClassName == "qr-text") {
     // Disable ScrollTrigger animation when the keyboard is open or the viewport width is less than 768px
     ScrollTrigger.getAll().forEach((trigger) => {
       trigger.disable();
