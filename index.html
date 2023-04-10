@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="./android-chrome-192x192.png">
+    <title>QR reader & Generator</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+      
+    />
+    <script src="https://kit.fontawesome.com/c1fc3d2826.js" crossorigin="anonymous"></script>
+    <script defer src="./learn.js"></script>
+    <script defer src="./qrcode.js"></script>
+    <script defer src="./qrcodereader.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script defer  src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+
+    
+  </head>
+  <body>
+    <button class="burger" onclick="toggleMenu()"></button>
+    <div class="menu">
+      <nav>
+        <a href="#" style="animation-delay: 0.2s">Home</a>
+        <a href="#" onclick="smoothScroll('#about')" style="animation-delay: 0.3s">About</a>
+        <a href="https://krishkumar84.github.io/newresumeweb/ "target="_blank" style="animation-delay: 0.4s">Portfolio</a>
+        <a href="#" onclick="smoothScroll('#contact')" style="animation-delay: 0.5s">Contact</a>
+      </nav>
+    </div>
+    <nav >
+      <img class="navimg" src="logo.svg" />
+      <div class="hidenav">
+        <a href="#"> Home </a>
+        <a href="#" onclick="smoothScroll('#about')"> About </a>
+        <a href="https://krishkumar84.github.io/newresumeweb/ "target="_blank"> Portfolio </a>
+        <a href="#" onclick="smoothScroll('#contact')"> Contact </a>
+      </div>
+    </nav>
+    <section class="banner section-web">
+        <div>
+          <h2>QR Reader & Generator</h2>
+          <h3>
+            Welcome to this web app here you can generate you QR code in any color and also work as QR reader xd.
+          </h3>
+        </div>
+        <img src="avatar.jpeg" />
+      </section>
+    <div class="container">
+      <section class="description panel blue ">
+        <h2 class="qrcodeh2">QR Generator</h2>
+          <div class="row qrmaker">
+            
+              <input type="color" class="light" value="#ffffff">
+              <input type="color" class="dark" >
+              <select  class="sizes">
+                  <option value="100">100x100</option>
+                  <option value="200">200x200</option>
+                  <option value="300">300x300</option>
+                  <option value="400">400x400</option>
+                  <option value="500">500x500</option>
+                  <option value="600">600x600</option>
+                  <option value="700">700x700</option>
+                  <option value="800">800x800</option>
+              </select>
+          </div>
+          <input type="text" class="qr-text" placeholder="Enter QR Text">
+          <div id="qr-code" class=""> </div>
+          <div class="action-container">
+              <a href="#" class="download btn">
+                  <span>Downlaod</span>
+                  <i class=" icon fa-solid fa-download fa-bounce"></i>
+              </a>
+              <button class="btn share-btn">
+                  <span>share</span>
+                  <i class=" icon fa-solid fa-share fa-fade"></i>
+              </button>
+          </div>
+      </section>
+      <section class="panel red  ">
+        <div class="wrapper qrreader">
+          <form action="#">
+              <input type="file" id="file-input" hidden>
+              <img src="#" alt="">
+              <div class="content">
+                  <i class="fa-solid fa-cloud-arrow-up fa-bounce"></i>
+                  <p>Upload QR Code To Read</p>
+              </div>
+          </form>
+          <div class="details">
+              <textarea spellcheck="false" disabled></textarea>
+              <div class="buttons">
+                  <button class="close">Close</button>
+                  <button class="copy">Copy Text</button>
+              </div>
+          </div>
+      </div>
+      </section>
+      
+    </div>
+    <section class="footer-web body-card" id="about">
+      <div class="card ">
+        <img src="./krish photo.jpg" />
+        <div>
+          <h2>Project is made by me - Krish</h2>
+          <h3>made with >>>3</h3>
+          <p>
+           Made with Html Css and Js and lots of error xd
+          </p>
+          <button ><a  href="https://krishkumar84.github.io/newresumeweb/ "target="_blank" class="yt">Show Resume</a></button>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="faq-section">
+      <div class="faqsection">
+        <h2 class="faq font-bold ">Frequently asked questions</h2>
+        <div class="accordian">
+            <div class="question">
+                <h4>How do I scan a QR code?</h4>
+                <i class=" icon fa-solid fa-caret-down"></i>
+            </div>
+            <div class="answer">
+                <p>To scan a QR code, Scroll above to  QR code reader and click on that  and upload QR image The app will then read the code and display the information encoded within it. </p>
+            </div>
+        </div>
+        <div class="accordian">
+            <div class="question">
+                <h4>How do I create a QR code?</h4>
+                <i class=" icon fa-solid fa-caret-down"></i>
+            </div>
+            <div class="answer">
+                <p>Scroll above to QR code generator shown that allow you to create a QR code for free. Simply enter the text you want to encode, and the tool will generate a QR code for you to download and also share to use.</p>
+            </div>
+        </div>
+        <div class="accordian">
+            <div class="question">
+                <h4>Can QR codes be customized?</h4>
+                <i class=" icon fa-solid fa-caret-down"></i>
+            </div>
+            <div class="answer">
+                <p>Yes, QR codes can be customized with colors, and in different sizes to make them more visually appealing.</p>
+            </div>
+        </div>
+        <div class="accordian">
+            <div class="question">
+                <h4>Can I scan a QR code without an internet connection?</h4>
+                <i class=" icon fa-solid fa-caret-down"></i>
+            </div>
+            <div class="answer">
+                <p> Nopw,QR code readers require an internet connection to function, as they need to connect to a database to interpret the information encoded within the code.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- footer -->
+
+
+
+
+    <section class="section-footer" id="contact">
+      <footer class="top">
+        <a class="footerimg-heading">
+            <img src="https://flowbite.com/docs/images/logo.svg" class=" footerimg" alt="FlowBite Logo" />
+            <span class=" flowbite ">Flowbite</span>
+        </a>
+        <div class="links">
+          <div>
+            <h2>Platform</h2>
+            <a>Html</a>
+            <a>Css</a>
+            <a>Api's</a>
+            <a>javascript</a>
+            <a>tailwind css</a>
+            
+          </div>
+          <div>
+            <h2>Contact</h2>
+            <a href="https://www.youtube.com/channel/UCRqKJW_E78C6ZIAPGw-ZuPw" target="_blank" class="yt">Youtube</a>
+            <a href="https://github.com/krishkumar84/krishkumar84.git" target="_blank" class="yt">Github</a>
+            <a  href="mailto:sharmageeta847@gmail.com" target="_blank" class="yt">Gmail</a>
+            <a>Linkedin</a>
+            <a>Instagram</a>
+          </div>
+        </div>
+      </footer>
+      <footer class="bottom">
+        <div class="legal">
+          <span> © 2023 All rights reserved </span>
+          <a> License </a>
+          <a> Terms </a>
+          <a> Privacy </a>
+        </div>
+        <div class="links">
+          <a class="fa-brands fa-github"></a>
+          <a class="fa-brands fa-linkedin"></a>
+          <a class="fa-brands fa-docker"></a>
+        </div>
+      </footer>
+    </section>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+      integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"
+      integrity="sha512-A64Nik4Ql7/W/PJk2RNOmVyC/Chobn5TY08CiKEX50Sdw+33WTOpPJ/63bfWPl0hxiRv1trPs5prKO8CpA7VNQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./main.js"></script>
+    <script type="text/javascript">
+      const toggleMenu = () => document.body.classList.toggle("open");
+    </script>
+    <script>
+      function smoothScroll(target) {
+        var targetElement = document.querySelector(target);
+        window.scrollTo({
+          behavior: 'smooth',
+          top: targetElement.offsetTop
+        });
+      }
+    </script>
+  </body>
+</html>
